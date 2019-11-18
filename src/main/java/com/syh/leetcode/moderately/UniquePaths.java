@@ -4,7 +4,7 @@ package com.syh.leetcode.moderately;
 问总共有多少条不同的路径？
 * */
 public class UniquePaths {
-    public int uniquePaths(int m, int n) {
+    public int uniquePaths1(int m, int n) {
         int [][] dp = new int[m][n];
         for (int i=0;i<dp.length;i++){
             dp[i][0]=1;
@@ -20,5 +20,11 @@ public class UniquePaths {
             }
         }
         return dp[m-1][n-1];
+    }
+
+    public static void main(String[] args) {
+        UniquePaths uniquePaths = new UniquePaths();
+        int a = uniquePaths.uniquePaths1(2,2);
+        System.out.println(a);
     }
 }
