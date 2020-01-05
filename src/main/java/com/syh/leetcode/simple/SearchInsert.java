@@ -10,6 +10,9 @@ public class SearchInsert {
             return len;
         }
         for (int i=0;i<len-1;i++){
+            if(nums[i]==target){
+                return i;
+            }
             if (target>nums[i]&&target<nums[i+1]){
                 return i+1;
             }
@@ -37,10 +40,21 @@ public class SearchInsert {
         return left;
     }
 
+    public int searchInsert3(int[] nums,int target){
+        for (int i=0;i<nums.length;i++){
+            if (nums[i]>target){
+                return i;
+            }
+            if (nums[i]==target){
+                return i;
+            }
+        }
+        return nums.length;
+    }
     public static void main(String[] args) {
         SearchInsert searchInsert = new SearchInsert();
-        int [] nums = {1,2,3};
-        int res = searchInsert.searchInsert2(nums,3);
+        int [] nums = {1,3,5,6};
+        int res = searchInsert.searchInsert3(nums,4);
         System.out.println(res);
     }
 }
