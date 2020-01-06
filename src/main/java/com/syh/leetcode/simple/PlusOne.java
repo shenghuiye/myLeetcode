@@ -1,7 +1,11 @@
 package com.syh.leetcode.simple;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class PlusOne {
     public int[] plusOne1(int[] digits) {
+
         int len = digits.length;
         for (int i=len-1;i>=0;i--){
             digits[i]++;
