@@ -25,7 +25,7 @@ public class Generate {
         }
         return triangle;
     }
-
+//得到第k行 空间复杂度O(k)
     public List<Integer> getRow(int numIndex) {
         List<Integer> prev = new ArrayList<Integer>();
         for (int i=0;i<=numIndex;i++){
